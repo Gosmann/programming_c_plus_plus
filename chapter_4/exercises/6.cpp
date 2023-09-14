@@ -3,34 +3,32 @@
 
 int main(){
 
-    double num1, num2, res;
-    char operation;
+    // int input;
+    string input;
 
-    cout << "Enter 2 numbers and an operation (+, -, *, /): " ;
-    cin >> num1 >> num2 >> operation ;
+    vector<string> nums = { "zero", "one", "two", "three", "four", 
+        "five", "six", "seven", "eigth", "nine" };
 
-    switch( operation ){
-        case '+':
-            res = num1 + num2 ;
-            cout <<"The sum of " ;
-            break;
-        case '-':
-            res = num1 - num2 ;
-            cout <<"The subtraction of " ;
-            break;
-        case '*':
-            res = num1 * num2 ;
-            cout <<"The multiplication of " ;
-            break;
-        case '/':
-            res = num1 / num2 ;
-            cout <<"The division of " ;
-            break;
-        default:   
-            cout << "Error running operation ";
+    cout << "Enter a single digit : " ;
+
+    while ( cin >> input ){
+        // num -> string
+        /*      
+        if( input >= 0 && input <= 9 ){     // it is valid number
+            cout << nums[ input ] << " : " ;
+        }
+        */
+
+        // string -> num 
+        int i;
+        for(i = 0 ; i < 10; i++){
+            if( input == nums[i] ){     // the number if found
+                
+                cout << i << " : " ;
+                break;
+            }
+        }
     }
-
-    cout << num1 << " and " << num2 << " is " << res << " \n";
 
     
 }
