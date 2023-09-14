@@ -3,7 +3,6 @@
 
 int main(){
 
-    // int input;
     string input;
 
     vector<string> nums = { "zero", "one", "two", "three", "four", 
@@ -12,22 +11,24 @@ int main(){
     cout << "Enter a single digit : " ;
 
     while ( cin >> input ){
-        // num -> string
-        /*      
-        if( input >= 0 && input <= 9 ){     // it is valid number
-            cout << nums[ input ] << " : " ;
+        
+        if( input.size() == 1 ){    // it is a single number
+            // num -> string
+            cout << nums[ input[0] - '0' ] << " : " ;
         }
-        */
-
-        // string -> num 
-        int i;
-        for(i = 0 ; i < 10; i++){
-            if( input == nums[i] ){     // the number if found
-                
-                cout << i << " : " ;
-                break;
+        else{                       // it is an actual string
+            // string -> num 
+            int i;
+            for(i = 0 ; i < 10; i++){
+                if( input == nums[i] ){     // the number if found        
+                    cout << i << " : " ;
+                    break;
+                }
             }
+
         }
+
+        
     }
 
     
