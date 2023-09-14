@@ -1,4 +1,4 @@
 all:
-	g++ 7.cpp -o output
+	g++ 8.cpp -o output
 clean:
 	rm output
