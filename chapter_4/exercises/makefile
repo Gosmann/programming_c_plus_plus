@@ -1,4 +1,4 @@
 all:
-	g++ 17.cpp -o output
+	g++ 21.cpp -o output
 clean:
 	rm output
